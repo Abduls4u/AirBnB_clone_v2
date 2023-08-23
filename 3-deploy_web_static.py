@@ -2,9 +2,10 @@
 '''do_deploy module'''
 from fabric.api import env, run, put
 from datetime import datetime
-
 env.user = 'ubuntu'
 env.hosts = ['100.26.122.31', '52.3.253.201']
+
+
 def do_pack():
     '''generates a .tgz archive from the contents of the web_static'''
     try:
@@ -40,6 +41,7 @@ def do_deploy(archive_path):
         return (True)
     else:
         return (False)
+
 
 def deploy():
     ''' Creates and Distributes an archive to your web servers'''
