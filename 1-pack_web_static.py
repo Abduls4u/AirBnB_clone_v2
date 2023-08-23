@@ -14,3 +14,7 @@ def do_pack():
         return ('versions/{}'.format(archive))
     except Exception:
         return (None)
+
+
+if __name__ == "__main__":
+    do_pack()

@@ -2,12 +2,11 @@
 '''do_deploy module'''
 from fabric.api import run, put, env
 import os
-env.user = 'ubuntu'
-env.hosts = ['100.26.122.31', '52.3.253.201']
 
 
 def do_deploy(archive_path):
     '''Distributes an archive to your web servers'''
+
     if os.path.exists(archive_path):
         # get filename from the archive path
         filename_w_ext = os.path.basename(archive_path)
@@ -29,3 +28,7 @@ def do_deploy(archive_path):
         return (True)
     else:
         return (False)
+
+
+if __name__ == "__main__":
+    do_deploy()
