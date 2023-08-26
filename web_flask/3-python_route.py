@@ -23,6 +23,7 @@ def display_text_c(text):
     '''returns C ” followed by the value of the text variable'''
     return (f"C {text.replace('_', ' ')}")
 
+
 @app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def display_text_python(text='is cool'):
